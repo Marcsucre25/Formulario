@@ -1,0 +1,78 @@
+.gallery{
+    height: 600px;
+    width: 95%;
+    margin: 40px auto;
+    display: flex;
+}
+
+.gallery_img{
+    width: 80px;
+    height: 100%;
+    background-size:cover;
+    background-position: center;
+    transition: flex .5s;
+    flex: 1;
+    display: grid;
+
+    --message: "Saga de Freezer";
+    --message1: "Saga de Cell";
+    --message2: "Saga de Majin Boo";
+    --clip: circle(0 at center);
+    --transition: clip-path .2s;
+
+}
+
+.gallery_img:nth-child(1):before{
+    content: var(--message);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: Arial;.gallery_img:nth-child(2):before{
+
+    font-size: 2rem;
+    color: #fff;
+    clip-path: var(--clip);
+    transition: var(--transition);
+}
+
+    content: var(--message1);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: Arial;
+    font-size: 2rem;
+    color: #fff;
+    clip-path: var(--clip);
+    transition: var(--transition);
+}
+
+.gallery_img:nth-child(3):before{
+    content: var(--message2);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: Arial;
+    font-size: 2rem;
+    color: #fff;
+    clip-path: var(--clip);
+    transition: var(--transition);
+}
+
+.gallery_img:hover{
+    flex: 3; /*El elemento crece 6 veces */ 
+    --clip: circle(100% at center);
+    --transition: clip-path .4s .5s;
+}
+
+
+.gallery_img:nth-child(1){
+    background-image: url(freezer.jpg);
+}
+
+.gallery_img:nth-child(2){
+    background-image: url(cell.jpg);
+}
+
+.gallery_img:nth-child(3){
+    background-image: url(majin.jpg);
+}

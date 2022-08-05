@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+}
+
+.contenedor-mostrar{
+    width: 500px;
+    height: 500px;
+    background: cadetblue;
+    margin: auto;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    clip-path: circle(20% at top left);
+    transition: all 1s;
+}
+
+
+
+li {
+    list-style: none;
+    line-height: 2cm;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    
+}
+
+
+.contenedor-mostrar:hover{
+
+    clip-path: circle(50% at center center);
+
+}
+
+.imagen{
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
